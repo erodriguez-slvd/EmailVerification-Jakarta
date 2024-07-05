@@ -7,7 +7,12 @@ public abstract class HomePageBase extends AbstractPage {
     public HomePageBase(WebDriver driver) {
         super(driver);
     }
+
     public abstract void inputEmail(String email);
+
     public abstract void clickOnSendBtn();
+
     public abstract boolean isSuccessfullySent();
+
+    public abstract String getSentEmailID();
 }

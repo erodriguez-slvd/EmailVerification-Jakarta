@@ -41,4 +41,9 @@ public class HomePage extends HomePageBase {
         LOGGER.info("** " + successfullySentText.getText() + " **");
         return successfullySentText.isElementPresent();
     }
+
+    @Override
+    public String getSentEmailID() {
+        return successfullySentText.getText().replace("Success - A test message has been sent!\n" + "Email ID: ", "");
+    }
 }
